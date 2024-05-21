@@ -149,7 +149,7 @@ function App() {
                 start="SEPTEMBER 2020"
                 end="APRIL 2023"
                 url={cc}
-                descriptions="National Honors Society, Marching Band, Jazz Band, Concert Band, and five-time Academic Honor Award recipient"
+                descriptions="Academic honors six times, Early College Ambassador, Phi Theta Kappa Honor Society, Student Services Council, Business Administration Committee, and Student Government Association President"
               />
               <Education
                 school="Orchard View High School"
@@ -157,8 +157,9 @@ function App() {
                 start="SEPTEMBER 2018"
                 end="APRIL 2022"
                 url={high}
-                descriptions="Academic honors six times, Early College Ambassador, Phi Theta Kappa Honor Society, Student Services Council, Business Administration Committee, and Student Government Association President"
-              />
+                descriptions="
+                National Honors Society, Marching Band, Jazz Band, Concert Band, and five-time Academic Honor Award recipient"
+                />
           </div>
           </div>
           <div className="bg-blue-950 pt-20 flex flex-col pb-20 h-auto w-screen justify-center items-center md:h-screen">
