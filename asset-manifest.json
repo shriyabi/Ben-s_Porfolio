@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Ben-s_Porfolio/static/css/main.adad29aa.css",
+    "main.js": "/Ben-s_Porfolio/static/js/main.29effb00.js",
+    "static/js/453.8ab44547.chunk.js": "/Ben-s_Porfolio/static/js/453.8ab44547.chunk.js",
+    "static/media/pyeveryone.jpeg": "/Ben-s_Porfolio/static/media/pyeveryone.275d8077511b13d92f03.jpeg",
+    "static/media/dspython.jpeg": "/Ben-s_Porfolio/static/media/dspython.71f4ce20126bf7387cff.jpeg",
+    "static/media/gsp.png": "/Ben-s_Porfolio/static/media/gsp.7d4cdd383492b9a5a231.png",
+    "static/media/UROP.jpeg": "/Ben-s_Porfolio/static/media/UROP.9ac81214aa4f2492074f.jpeg",
+    "static/media/IMG_5595.jpeg": "/Ben-s_Porfolio/static/media/IMG_5595.9fd44eca0bd1e84e78a9.jpeg",
+    "static/media/rise.jpeg": "/Ben-s_Porfolio/static/media/rise.971e5424585137968768.jpeg",
+    "static/media/will.jpeg": "/Ben-s_Porfolio/static/media/will.71a7df335829a153c1e6.jpeg",
+    "static/media/lobby.jpeg": "/Ben-s_Porfolio/static/media/lobby.7848a701cc576ec6732f.jpeg",
+    "static/media/MIPP.jpeg": "/Ben-s_Porfolio/static/media/MIPP.10862553fb82cd004be1.jpeg",
+    "static/media/pres.jpeg": "/Ben-s_Porfolio/static/media/pres.646f885a27af50fd6527.jpeg",
+    "static/media/ccbean.jpeg": "/Ben-s_Porfolio/static/media/ccbean.9aaaf4fbc236ab0da6e1.jpeg",
+    "static/media/highschool.jpeg": "/Ben-s_Porfolio/static/media/highschool.55d4de8d91c25190081f.jpeg",
+    "static/media/4MichBlue.png": "/Ben-s_Porfolio/static/media/4MichBlue.698a7fb21c4460505fa4.png",
+    "index.html": "/Ben-s_Porfolio/index.html",
+    "main.adad29aa.css.map": "/Ben-s_Porfolio/static/css/main.adad29aa.css.map",
+    "main.29effb00.js.map": "/Ben-s_Porfolio/static/js/main.29effb00.js.map",
+    "453.8ab44547.chunk.js.map": "/Ben-s_Porfolio/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adad29aa.css",
+    "static/js/main.29effb00.js"
+  ]
+}
