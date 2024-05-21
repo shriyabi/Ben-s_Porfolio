@@ -135,7 +135,7 @@ function App() {
           <div className="bg-blue-950 flex flex-col h-auto w-screen justify-center items-center md:h-screen">
             <header className="text-3xl font-bold text-gray-300 text-center"> Education </header>
             <br></br>
-            <div className="flex flex-col w-full h-auto items-center justify-center md:flex-row w-[75vw] h-[50vh] lg:h-[45vh]">
+            <div className="flex flex-col w-full h-auto items-center justify-center md:flex-row w-[75vw] h-[50vh]">
               <Education
                 school="University of Michigan- Ann Arbor"
                 degree="Bachelor's Degrees in Political Science and History"
