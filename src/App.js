@@ -52,9 +52,9 @@ function Dropdown() {
 
 function Education({ school, degree, start, end, url, descriptions }) {
   return (
-    <div className="w-[80vw] h-[45vh] bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-full mr-5 w-1/3">
+    <div className="w-[80vw] h-1/3 bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-full w-4/5 margin">
       <div className="text-l font-bold text-center text-red-700 pt-3 pl-3 pr-3 md:text-xl pt-5 pl-5 pr-5"> {school} </div>
-      {/*<img src={url} className="rounded-full m-1 w-2/5 h-auto md:w-1/2 m-2 h-[10em] lg:w-1/3 h-[20em]"></img>*/}
+      <img src={url} className="rounded-full w-auto h-[9em] md:w-1/2 m-2 lg:w-1/3 h-[20em]"></img>
       <div className="text-sm px-1 text-center font-semibold italic md:text-base pt-2 lg:text-lg">{degree}</div>
       <div className="text-xs text-center text-blue-950 px-1 leading-none pt-2 md:text-sm"> {start} </div>
       <div className="text-xs text-center text-blue-950 leading-none font-bold px-1 md:text-sm"> - </div>
@@ -66,7 +66,7 @@ function Education({ school, degree, start, end, url, descriptions }) {
 
 function Certifications({name,issuer,date,url}) {
   return (
-    <div className="relative w-[80vw] h-1/4 bg-gray-300 border-red-700 flex flex-col px-2 justify-centerrounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg certi mb-5 md:h-full md:w-1/3 mr-10">
+    <div className="relative mb-20 w-[80vw] h-1/4 bg-gray-300 border-red-700 flex flex-col px-2 justify-centerrounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg certi mb-5 md:h-full md:w-1/3 md:mr-10">
       <div className="text-base text-center font-semibold underline text-blue-950 md:text-lg lg:text-xl">{name}</div>
       <div className="text-sm text-center font-semibold text-red-700 italic md:text-base lg:text-lg">{issuer}</div>
       <div className="h-1/2 w-auto border-2 border-red-700 m-4 self-center rounded-tl-sm rounded-bl-sm rounded-tr-sm rounded-br-sm cert">
@@ -132,10 +132,10 @@ function App() {
           </div>
       </div>
       </div>
-          <div className="bg-blue-950 flex flex-col h-screen w-screen justify-center items-center">
+          <div className="bg-blue-950 flex flex-col h-auto w-screen justify-center items-center md:h-screen">
             <header className="text-3xl font-bold text-gray-300 text-center"> Education </header>
             <br></br>
-            <div className="flex flex-col w-full h-auto items-center justify-center md:flex-row w-[85vw] h-[50vh] lg:h-[45svh]">
+            <div className="flex flex-col w-full h-auto items-center justify-center md:flex-row w-[75vw] h-[50vh] lg:h-[45vh]">
               <Education
                 school="University of Michigan- Ann Arbor"
                 degree="Bachelor's Degrees in Political Science and History"
@@ -161,10 +161,10 @@ function App() {
               />
           </div>
           </div>
-          <div className="bg-blue-950 flex flex-col h-screen w-screen justify-center items-center">
+          <div className="bg-blue-950 pt-20 flex flex-col pb-20 h-auto w-screen justify-center items-center md:h-screen">
               <header className="text-xl font-bold text-gray-300 text-center md:text-2xl"> Licenses and Certifications </header>
               <br></br>
-              <div className="mb-20 md:inline-flex w-[85vw] lg: w-auto">
+              <div className="mb-10 md:inline-flex w-[85vw] md:w-[80vw] lg: w-auto lg:mb-20">
               <Certifications
                 name="Precinct Election Inspector"
                 issuer="State of Michigan"
@@ -188,12 +188,12 @@ function App() {
 
                 <header className="text-xl font-bold text-gray-300 text-center md:text-2xl">Languages</header>
                 <br></br>
-                <div className="inline-flex h-auto w-auto certi">
-                  <div className="bg-gray-300 flex flex-col h-full w-full p-7 items-center flex justify-center">
+                <div className="inline-flex h-[10em] w-auto certi">
+                  <div className="bg-gray-300 flex flex-col h-full w-full p-7 items-center flex justify-center rounded-tl-lg rounded-bl-lg">
                     <div className="text-xl font-semibold text-red-700">English</div>
                     <div className="text-sm text-center">Fluent</div>
                   </div>
-                  <div className="bg-gray-300 flex flex-col h-full w-full p-7 items-center flex justify-center">
+                  <div className="bg-gray-300 flex flex-col h-full w-full p-7 items-center flex justify-center rounded-tr-lg rounded-br-lg">
                     <div className="text-xl font-semibold text-red-700">French</div>
                     <div className="text-sm text-center">Professional Working Experience</div>
                   </div>
@@ -206,14 +206,14 @@ function App() {
             <div className="text-xl font-bold">Let's Connect!</div>
             <br></br>
             <div className="flex inline-flex justify-center h-2/3 w-3/4">
-              <div className="contact-box w-2/5 md:w-1/3 mr-5 flex flex-col justify-center items-center p-5 h-3/4 lg:w-1/5">
+              <div className="contact-box w-1/2 md:w-1/3 mr-5 flex flex-col justify-center items-center p-5 h-3/4 lg:w-1/5">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                 </svg>
                 <br></br>
                 <Dropdown />
               </div>
-              <div className="contact-box w-2/5 md:w-1/3 flex flex-col justify-center items-center p-5 h-3/4 lg:w-1/5">
+              <div className="contact-box w-1/2 md:w-1/3 flex flex-col justify-center items-center p-5 h-3/4 lg:w-1/5">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                 </svg>

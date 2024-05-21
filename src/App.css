@@ -44,6 +44,8 @@
 }
 .box-shadow:hover{
   box-shadow: 0 0 3em #c0c0c0;
+  width: 4em;
+  height: 4em;
 }
 
 .certi{
@@ -53,4 +55,10 @@
 .cert{
   box-shadow: 0 0 1em #0c01019d;
 }
+
+@media screen and (min-width:768px){
+.margin{
+  margin-right:2em;
+}
+} 
 
