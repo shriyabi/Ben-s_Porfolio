@@ -70,7 +70,7 @@ function Certifications({name,issuer,date,url}) {
       <div className="text-base text-center font-semibold underline text-blue-950 md:text-lg lg:text-xl">{name}</div>
       <div className="text-sm text-center font-semibold text-red-700 italic md:text-base lg:text-lg">{issuer}</div>
       <div className="h-1/2 w-auto border-2 border-red-700 m-4 self-center rounded-tl-sm rounded-bl-sm rounded-tr-sm rounded-br-sm cert">
-        <img src={url} className="w-full h-full"></img>
+        <img src={url} className="w-full h-full "></img>
       </div>
       <div className="text-right text-xs absolute bottom-0 right-0 px-2 md:text-sm lg:text-base">Issued {date}</div>
     </div>
