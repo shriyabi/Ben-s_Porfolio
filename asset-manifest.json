@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Ben-s_Porfolio/static/css/main.0471c84f.css",
-    "main.js": "/Ben-s_Porfolio/static/js/main.36684c78.js",
+    "main.css": "/Ben-s_Porfolio/static/css/main.de85d96a.css",
+    "main.js": "/Ben-s_Porfolio/static/js/main.02e69910.js",
     "static/js/453.8ab44547.chunk.js": "/Ben-s_Porfolio/static/js/453.8ab44547.chunk.js",
     "static/media/pyeveryone.jpeg": "/Ben-s_Porfolio/static/media/pyeveryone.275d8077511b13d92f03.jpeg",
     "static/media/dspython.jpeg": "/Ben-s_Porfolio/static/media/dspython.71f4ce20126bf7387cff.jpeg",
@@ -17,12 +17,12 @@
     "static/media/highschool.jpeg": "/Ben-s_Porfolio/static/media/highschool.55d4de8d91c25190081f.jpeg",
     "static/media/4MichBlue.png": "/Ben-s_Porfolio/static/media/4MichBlue.698a7fb21c4460505fa4.png",
     "index.html": "/Ben-s_Porfolio/index.html",
-    "main.0471c84f.css.map": "/Ben-s_Porfolio/static/css/main.0471c84f.css.map",
-    "main.36684c78.js.map": "/Ben-s_Porfolio/static/js/main.36684c78.js.map",
+    "main.de85d96a.css.map": "/Ben-s_Porfolio/static/css/main.de85d96a.css.map",
+    "main.02e69910.js.map": "/Ben-s_Porfolio/static/js/main.02e69910.js.map",
     "453.8ab44547.chunk.js.map": "/Ben-s_Porfolio/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0471c84f.css",
-    "static/js/main.36684c78.js"
+    "static/css/main.de85d96a.css",
+    "static/js/main.02e69910.js"
   ]
 }
