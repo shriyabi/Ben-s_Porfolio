@@ -1,0 +1,108 @@
+import React from 'react'
+import { useSpring, useSprings } from '@react-spring/web'
+import { styled } from './style/stitches.config'
+
+const BUTTON_SIZE = 56
+const COLORS = ['#669EF2', '#F9DB6D', '#DC602E', '#83BB70']
+
+const ExpandableButton = ({ onPointerEnter, onPointerLeave }) => {
+  const [isVisible, setIsVisible] = React.useState(false)
+
+  const [{ opacity }, api] = useSpring(
+    () => ({
+      opacity: 0,
+    }),
+    []
+  )
+
+  const [avatarSprings] = useSprings(
+    COLORS.length,
+    i => ({
+      y: 0,
+    }),
+    []
+  )
+
+  React.useEffect(() => {
+    if (onPointerEnter) {
+      setIsVisible(true)
+      api.start({ opacity: 1 })
+      avatarSprings.start({ y: 0 })
+    }
+
+    if (onPointerLeave) {
+      setIsVisible(false)
+      api.start({ opacity: 0 })
+      avatarSprings.start(i => ({
+        y: BUTTON_SIZE,
+        onRest: () => setIsVisible(false),
+      }))
+    }
+  }, [onPointerEnter, onPointerLeave, opacity, avatarSprings])
+
+  return (
+    <FloatingButton
+      onMouseEnter={onPointerEnter}
+      onMouseLeave={onPointerLeave}
+      style={{ opacity }}
+    >
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#1a1a1a" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <path d="M128,24A104,104,0,0,0,36.8,178l-8.5,29.9a16.1,16.1,0,0,0,4,15.8,15.8,15.8,0,0,0,15.7,4l30-8.5A104,104,0,1,0,128,24Zm32,128H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Zm0-32H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Z"></path>
+        </svg>
+      </span>
+      {isVisible && (
+        <>
+          {avatarSprings.map((springs, index) => (
+            <AvatarIcon
+              key={COLORS[index]}
+              css={{
+                backgroundColor: COLORS[index],
+              }}
+              style={springs}
+            />
+          ))}
+        </>
+      )}
+    </FloatingButton>
+  )
+}
+
+const AvatarIcon = styled('div', {
+  width: BUTTON_SIZE,
+  height: BUTTON_SIZE,
+  borderRadius: '50%',
+  mx: 4,
+  position: 'absolute',
+  bottom: 0,
+  transition: 'all 0.2s ease',
+})
+
+const FloatingButton = styled('div', {
+  width: BUTTON_SIZE,
+  height: BUTTON_SIZE,
+  borderRadius: '50%',
+  border: 'none',
+  position: 'relative',
+  backgroundClip: 'content-box',
+  zIndex: 0,
+  touchAction: 'none',
+
+  '&:focus-visible': {
+    outlineOffset: 2,
+    outline: '#569AFF99 auto 6px',
+  },
+
+  '& > span': {
+    borderRadius: 'inherit',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#fafafa',
+  },
+})
+
+export default ExpandableButton

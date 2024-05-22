@@ -12,6 +12,7 @@ import mich from './michigan.jpeg';
 import { useSpring, animated } from '@react-spring/web'
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
+import { useTransition, useSprings } from '@react-spring/web'
 //import exported func from class
 
 //imma be making this a template anyway so here we react!!
@@ -94,7 +95,7 @@ function Certifications({ name, issuer, date, url }) {
   )
 }
 
-function Circle({icon}) {
+function Circle({icon, href}) {
   {/*const props = useSpring({
     to: { transform: 'translateY(0px)' },
     from: { transform: 'translateY(-15px)' },
@@ -103,9 +104,26 @@ function Circle({icon}) {
   });
 return <animated.div style={props}>*/}
   return <animated.div>
-    <div className="mr-7 border-2 border-solid border-red-700 p-2 text-blue-950 bg-gray-300 box-shadow">
+    <a href={href}><div className="mr-7 border-2 border-solid border-red-700 p-2 text-blue-950 bg-gray-300 box-shadow hover:animate-bounce">
       {icon}
-    </div> </animated.div>
+    </div> </a> </animated.div>
+}
+
+function Transition({ children, className }) {
+  const styles = useSpring({
+    loop: true,
+    from: { opacity: 1, transform: 'scale(0.9)' },
+    to: [
+      { opacity: 1, transform: 'scale(1)' },
+      { opacity: 1, transform: 'scale(0.9)' },
+    ],
+    config: { duration: 2000 }, // Adjust duration as needed
+  });
+  return (
+    <animated.div className={className} style={styles}>
+      {children}
+    </animated.div>
+  );
 }
 
 const Home = () => {
@@ -116,7 +134,7 @@ const Home = () => {
     loop: { reverse: true },
   });
   return <animated.div style={props} className="flex items-center justify-center">
-    <div className="bg-blue-950 h-4/5 flex justify-center items-center flex-col">
+    <div className="bg-blue-1000 h-4/5 flex justify-center items-center flex-col">
        <div className="flex flex-col h-auto w-[85vw] items-center justify-center md:w-4/5 md:h-auto lg:h-auto lg:w-3/5">
           <div className="bg-gray-300 flex items-center justify-end inline-block pb-0 w-full lg:h-2/3 md:h-3/5 pl-2 box">
             <div className="h-1/2 w-full lg:h-3/5 md:h-1/2 inline-flex items-center justify-center">
@@ -125,9 +143,13 @@ const Home = () => {
                 <header className="text-3xl font-bold pl-3 md:pr-5 lg:pr-5 text-red-700 md:text-5xl"> {his_majesty.middle_name} </header>
                 <header className="text-3xl font-bold p;-3 md:pr-5 lg:pr-5 text-red-700 md:text-5xl"> {his_majesty.last_name} </header>
               </div>
-              <div className="w-1/2 items-center flex justify-center pb-3">
+              <Transition className={"w-1/2 items-center flex justify-center pb-3"}>
+              <img src={his_majesty.url} className="w-full h-auto md:w-3/4 lg:w-3/4 bean" alt="" />
+              </Transition>
+             {/*<div className="w-1/2 items-center flex justify-center pb-3">
                 <img src={his_majesty.url} className="w-full h-auto md:w-3/4 lg:w-3/4 bean" alt="" />
               </div>
+              </Transition> */}
             </div>
           </div>
           <div className="text-gray-300 pt-3 bg-red-700 flex flex-col justify-center items-center w-full h-auto text-[0.8em] md:h-2/3 md:text-sm lg:text-base px-4 pb-5 box-desc">
@@ -140,7 +162,6 @@ const Home = () => {
 }
 
 
-
 function App() {
   return (
     <>
@@ -149,23 +170,23 @@ function App() {
         <Home/>
         <div className="flex inline-flex justify-center items-center mt-[-2vh]">
           <Circle icon={
-            <a href="tel:2313295940">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
               </svg>
-            </a>}
+            }
+            href={"tel:2313295940>"}
           />
           <Circle icon={
-            <a href="mailto:hosler.ben@icloud.com">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
             </svg>
-          </a>}
+          }
+          href={"mailto:hosler.ben@icloud.com"}
           />
           <Circle icon={
-            <a href="http://www.linkedin.com/in/hoslerbenjamin" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} className="fa-2x" />
-          </a>}
+          }
+          href={"http://www.linkedin.com/in/hoslerbenjamin"}
           />
         </div>
       </div>
