@@ -11,7 +11,8 @@ import gsp from './gsp.png';
 import will from './will.jpeg';
 import rise from './rise.jpeg'; 
 import terry from './IMG_5595.jpeg';
-
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.compat.css";
 
 function PopUp({ title, description1, description2, description3, url, company, startDate, endDate, skills }) {
     const [open, setOpen] = useState(false);
@@ -25,7 +26,7 @@ function PopUp({ title, description1, description2, description3, url, company, 
         <div>
             <button className="text-xs text-red-700 hover:text-blue-950 hover:text-sm lg:text-sm hover:text-md" onClick={openModal}> Read More </button>
             {open && ( // Changed isOpen to open
-                <div className="modal-overlay">
+                <div className="modal-overlay ">
                     <div className="modal w-[80vw] md:w-3/5">
                         <div className="modal-header">
                             <div className="text-xl pt-5 pl-5 font-bold text-red-700 underline lg:text-2xl">{title}</div>
@@ -67,7 +68,7 @@ function Timeline() {
         <div className="flex flex-col justify-center w-4/5 lg:w-screen xl:w-3/5">
             <div className="flex inline-flex">
                 <div className="text-center w-1/2">
-                    <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
+                <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
                         <div className="text-xs text-left font-light pl-2 lg:text-base">APRIL 2024 - PRESENT</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Data Manager</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm md:text-lg"> For Michigan </div>
@@ -83,6 +84,7 @@ function Timeline() {
                             company="For Michigan"
                             skills="NGP Van, Spreadsheets, Data Management, Social Media Management" />
                     </div>
+                     
                 </div>
                 <div className="flex flex-col justify-center items-center px-4">
                     <div className="point"></div>
@@ -98,7 +100,7 @@ function Timeline() {
                     <div className="line"></div>
                 </div>
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
+                <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
                         <div className="text-xs text-left font-light pl-2 lg:text-base">FEBRURARY 2024 - APRIL 2024</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Data Fellow</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> For Michigan </div>
@@ -112,8 +114,10 @@ function Timeline() {
                     </div>
                 </div>
             </div>
+            
             <div className="flex inline-flex">
                 <div className=" text-center w-1/2">
+                 
                     <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
                     <div className="text-xs text-left font-light pl-2 lg:text-base">JANURARY 2024 - PRESENT </div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">GSP DEI Peer Facilitator</div>
@@ -125,6 +129,7 @@ function Timeline() {
                             skills="Diversity, Equity, Inclusion, Leadership"
                         />
                     </div>
+                      
                 </div>
                 <div className="flex flex-col justify-center items-center px-4">
                     <div className="point"></div>
@@ -141,7 +146,7 @@ function Timeline() {
                     <div className="line2"></div>
                 </div>
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
+                 <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
                         <div className="text-xs text-left font-light pl-2 lg:text-base">NOVEMBER 2023 - MARCH 2024</div>
                         <div className="text-sm font-bold text-center md:text-lg lg:text-xl">Deputy Campaigns and Lobbying Director</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Michigan Federation of College Democrats </div>
@@ -153,11 +158,12 @@ function Timeline() {
                             company="Michigan Federation of College Democrats"
                             skills="Microsoft Excel, Political Campaigns, Political Research and Tracking, Public Policy" />
                     </div>
+                      
                 </div>
             </div>
             <div className="flex inline-flex">
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
+                 <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
                     <div className="text-xs text-left font-light pl-2 lg:text-base">NOVEMBER 2023 - PRESENT</div>
                         <div className="text-sm font-bold text-center md:text-lg lg:text-xl">Policy Researcher and Presenter</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Michigan Institute of Progressive Policy</div>
@@ -169,10 +175,12 @@ function Timeline() {
                             company="Michigan Institute of Progressive Policy"
                             skills="Policy Research" />
                     </div>
+                        
                 </div>
                 <div className="flex flex-col justify-center items-center px-4">
                     <div className="point"></div>
                     <div className="line"></div>
+                    <div className="line2"></div>
                 </div>
                 <div className="text-center w-1/2"></div>
             </div>
@@ -183,7 +191,7 @@ function Timeline() {
                     <div className="line"></div>
                 </div>
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
+                 <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
                     <div className="text-xs text-left font-light pl-2 lg:text-base">SEPTEMBER 2023 - APRIL 2024</div>
                         <div className="text-sm font-bold text-center md:text-lg lg:text-xl">Research Assistant</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> University of Michigan Institute for Social Research </div>
@@ -197,11 +205,12 @@ function Timeline() {
                             skills="Elections, Qualitative and Quanitative Research Methodologies"
                         />
                     </div>
+                        
                 </div>
             </div>
             <div className="flex inline-flex">
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
+                 <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
                     <div className="text-xs text-left font-light pl-2 lg:text-base">AUGUST 2023 - OCTOBER 2023</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Intern</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Elect Democratic Women</div>
@@ -221,6 +230,7 @@ function Timeline() {
                             endDate="OCTOBER 2023"
                             company="Elect Democratic Women" />
                     </div>
+                        
                 </div>
                 <div className="flex flex-col justify-center items-center px-4">
                     <div className="point"></div>
@@ -235,7 +245,7 @@ function Timeline() {
                     <div className="line"></div>
                 </div>
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
+                 <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
                         <div className="text-xs text-left font-light pl-2 lg:text-base">AUGUST 2023 - PRESENT</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Member</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Global Scholars Program at the University of Michigan</div>
@@ -247,11 +257,12 @@ function Timeline() {
                             endDate="PRESENT"
                             company="Global Scholars Program at the University of Michigan" />
                     </div>
+                      
                 </div>
             </div>
             <div className="flex inline-flex">
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
+                <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
                         <div className="text-xs text-left font-light pl-2 lg:text-base">NOVEMBER 2022 -  APRIL 2023</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Student Body Representative</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Student Services Council and Business Administration Council @ Muskegon Community College </div>
@@ -264,6 +275,7 @@ function Timeline() {
                             skills="Leadership, Social Work"
                             company="Student Services Council and Business Administration Council @ Muskegon Community College" />
                     </div>
+                        
                 </div>
                 <div className="flex flex-col justify-center items-center px-4">
                     <div className="point"></div>
@@ -280,7 +292,7 @@ function Timeline() {
                     <div className="line2"></div>
                 </div>
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
+                 <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
                         <div className="text-xs text-left font-light pl-2 lg:text-base">AUGUST 2022 - APRIL 2023</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">President</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Muskegon Community College Student Government Association </div>
@@ -300,11 +312,12 @@ College pertaining to the students by holding meetings with the President and ot
                             endDate="APRIL 2023"
                             company="Muskegon Community College Student Government Association" />
                     </div>
+                        
                 </div>
             </div>
             <div className="flex inline-flex">
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
+                 <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
                     <div className="text-xs text-left font-light pl-2 lg:text-base">JULY 2022 - DECEMBER 2022</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Field Director</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Will Snyder for Michigan's 87th State House District</div>
@@ -321,6 +334,7 @@ College pertaining to the students by holding meetings with the President and ot
                             company="Will Snyder for Michigan's 87th State House District" 
                             skills="Political Campaigns, Campaign Strategy, Voter Engagement and Turnout, Canvassing and Text Banking Management"/>
                     </div>
+                        
                 </div>
                 <div className="flex flex-col justify-center items-center px-4">
                     <div className="point"></div>
@@ -336,7 +350,7 @@ College pertaining to the students by holding meetings with the President and ot
                 </div>
                 <div className=" text-center w-1/2">
                     <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">JULY 2022 - DECEMBER 2022</div>
+                         <div className="text-xs text-left font-light pl-2 lg:text-base">JULY 2022 - DECEMBER 2022</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Field Director</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Terry Sabo for Michigan's 32nd State Senate District </div>
                         <PopUp title="Field Director"
@@ -349,12 +363,13 @@ College pertaining to the students by holding meetings with the President and ot
                             endDate="DECEMBER 2022"
                             company="Terry Sabo for Michigan's 32nd State Senate District" 
                             skills="Political Campaigns, Event Management"/>
+                   
                     </div>
                 </div>
             </div>
             <div className="flex inline-flex">
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
+                 <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
                     <div className="text-xs text-left font-light pl-2 lg:text-base">MAY 2022 - SEPTEMBER 2022</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">West Michigan Regional Lead</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Rise</div>
@@ -367,7 +382,8 @@ College pertaining to the students by holding meetings with the President and ot
                             endDate="SEPTEMBER 2022"
                             company="Rise" 
                             skills="Civic Engagement, Voter Registration, Outreach and Marketing Strategy"/>
-                    </div>
+                          </div>
+                              
                 </div>
                 <div className="flex flex-col justify-center items-center px-4">
                     <div className="point"></div>

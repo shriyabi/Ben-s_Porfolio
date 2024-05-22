@@ -25,6 +25,7 @@
     height:auto;
     width: auto;
     box-shadow: 1em 1em 1em #c40c0c4f;
+    
     /*border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.2em;
@@ -34,6 +35,7 @@
     border: 0.3em solid #c40c0c;
     box-shadow: 0 0 2em #c0c0c060;
 }
+
 
 .modal-overlay {
     position: fixed;
@@ -45,12 +47,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10000;
   }
   
   .modal {
     background-color: #c0c0c0;
     border-radius: 0.5em;
     border: 0.2em solid #003366;
+    z-index:2; 
+    position:absolute;
     /*padding: 20px;*/
     box-shadow: 0 0 10em rgba(255, 255, 255, 0.206);
     box-shadow: 1em 1em 1em #c40c0c4f;
