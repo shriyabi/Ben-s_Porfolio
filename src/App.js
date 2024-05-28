@@ -56,7 +56,7 @@ function Dropdown() {
 
 const Education1 = ({ school, degree, start, end, url, descriptions }) => {
   return (
-    <div className="w-[80vw] h-1/3 bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-full w-4/5 mr-5 ml-5">
+    <div className="w-[80vw] h-1/3 bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-auto w-1/3 mr-5 ml-5">
       <div className="text-l font-bold text-center text-red-700 pt-3 pl-3 pr-3 md:text-xl pt-5 pl-5 pr-5"> {school} </div>
       <img src={url} className="rounded-full w-1/2 h-auto md:w-1/2 m-2 lg:w-1/3 h-auto"></img>
       <div className="text-sm px-1 text-center font-semibold italic md:text-base pt-2 lg:text-lg">{degree}</div>
@@ -70,7 +70,7 @@ const Education1 = ({ school, degree, start, end, url, descriptions }) => {
 
 const Education2 = ({ school, degree, start, end, url, descriptions }) => {
   return (
-    <div className="w-[80vw] h-1/3 bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-full w-4/5 ml-5 mr-5">
+    <div className="w-[80vw] h-1/3 bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-auto w-1/3 ml-5 mr-5">
       <div className="text-l font-bold text-center text-red-700 pt-3 pl-3 pr-3 md:text-xl pt-5 pl-5 pr-5"> {school} </div>
       <img src={url} className="rounded-full w-1/2 h-auto md:w-1/2 m-2 lg:w-1/3 h-auto"></img>
       <div className="text-sm px-1 text-center font-semibold italic md:text-base pt-2 lg:text-lg">{degree}</div>
@@ -84,7 +84,7 @@ const Education2 = ({ school, degree, start, end, url, descriptions }) => {
 
 function Certifications({ name, issuer, date, url }) {
   return (
-    <div className="relative mb-20 w-[80vw] h-1/4 bg-gray-300 border-red-700 flex flex-col px-2 justify-centerrounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg certi mb-5 md:h-full md:w-1/3 md:mr-10">
+    <div className="relative mb-20 w-[80vw] h-1/4 bg-gray-300 border-red-700 flex flex-col px-2 justify-centerrounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg certi mb-5 md:h-auto md:w-1/3 md:mr-10">
       <div className="text-base text-center font-semibold underline text-blue-950 md:text-lg lg:text-xl">{name}</div>
       <div className="text-sm text-center font-semibold text-red-700 italic md:text-base lg:text-lg">{issuer}</div>
       <div className="h-1/2 w-auto border-2 border-red-700 m-4 self-center rounded-tl-sm rounded-bl-sm rounded-tr-sm rounded-br-sm cert">
@@ -134,7 +134,7 @@ const Home = () => {
     loop: { reverse: true },
   });
   return <animated.div style={props} className="flex items-center justify-center">
-    <div className="bg-blue-1000 h-4/5 flex justify-center items-center flex-col">
+    <div className="bg-blue-950 h-4/5 flex justify-center items-center flex-col">
        <div className="flex flex-col h-auto w-[85vw] items-center justify-center md:w-4/5 md:h-auto lg:h-auto lg:w-3/5">
           <div className="bg-gray-300 flex items-center justify-end inline-block pb-0 w-full lg:h-2/3 md:h-3/5 pl-2 box">
             <div className="h-1/2 w-full lg:h-3/5 md:h-1/2 inline-flex items-center justify-center">
@@ -195,14 +195,20 @@ function App() {
           <div className="flex flex-col justify-center h-auto items-center">
             <header className="text-3xl font-bold text-gray-300 text-left"> Experience </header>
             <br></br>
-            <Timeline />
-          </div>
+            <ScrollAnimation animateIn='fadeIn'>
+              <div className="h-auto w-screen flex justify-center items-center">
+              <Timeline /> 
+              </div>
+            </ScrollAnimation>
+            </div>
         </div>
       </div>
       <div className="bg-blue-950 flex flex-col h-auto w-screen justify-center items-center md:h-screen">
         <header className="text-3xl font-bold text-gray-300 text-center"> Education </header>
         <br></br>
-        <div className="flex flex-col w-full h-auto items-center justify-center md:flex-row w-[75vw] h-[50vh]">
+        <ScrollAnimation animateIn='fadeIn'>
+        <div className="h-auto w-4/5 justify-center items-center md:h-3/4">
+        <div className="md:inline-flex w-[85vw]">
         <Education1
             className="mr-5"
             school="University of Michigan- Ann Arbor"
@@ -229,10 +235,14 @@ function App() {
                 National Honors Society, Marching Band, Jazz Band, Concert Band, and five-time Academic Honor Award recipient"
           />
         </div>
+        </div>
+        </ScrollAnimation>
       </div>
       <div className="bg-blue-950 pt-20 flex flex-col pb-20 h-auto w-screen justify-center items-center md:h-screen">
         <header className="text-xl font-bold text-gray-300 text-center md:text-2xl"> Licenses and Certifications </header>
         <br></br>
+        <ScrollAnimation animateIn='fadeIn'>
+        <div className="h-auto w-3/4 justify-center items-center md:h-2/3">
         <div className="mb-10 md:inline-flex w-[85vw] md:w-[80vw] lg: w-auto lg:mb-20">
           <Certifications
             name="Precinct Election Inspector"
@@ -254,9 +264,11 @@ function App() {
             url={every}
           />
         </div>
-
+        </div>
+        </ScrollAnimation>
         <header className="text-xl font-bold text-gray-300 text-center md:text-2xl">Languages</header>
         <br></br>
+        <ScrollAnimation animateIn='fadeIn'>
         <div className="inline-flex h-[10em] w-auto certi">
           <div className="bg-gray-300 flex flex-col h-full w-full p-7 items-center flex justify-center rounded-tl-lg rounded-bl-lg">
             <div className="text-xl font-semibold text-red-700">English</div>
@@ -267,6 +279,7 @@ function App() {
             <div className="text-sm text-center">Professional Working Experience</div>
           </div>
         </div>
+        </ScrollAnimation>
       </div>
 
       <div className="bg-gray-300 h-[30vh] w-screen flex justify-center">

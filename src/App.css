@@ -14,14 +14,16 @@
 .box{
   border-top-left-radius: 0.4em;
   border-top-right-radius: 0.4em;
-  box-shadow: 1.5em 1.5em 2em -1px #c0c0c079;
+  /*box-shadow: 1.5em 1.5em 2em -1px #c0c0c079;*/
+  box-shadow: 0 0 4em #c0c0c079;
 }
 
 .box-desc{
   border-bottom-left-radius: 0.4em;
   border-bottom-right-radius: 0.4em;
-  box-shadow: 1.5em 1.5em 2em -1px #c0c0c079;
-  
+  /*box-shadow: 1.5em 1.5em 2em -1px #c0c0c079;*/
+  box-shadow: 0 0 2em #c0c0c079; 
+  margin-bottom: 1em;
 }
 
 .experience-img{
