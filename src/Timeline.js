@@ -16,7 +16,7 @@ import { useSpring, animated } from '@react-spring/web'
 import { useTransition, useSprings } from '@react-spring/web'
 import "animate.css/animate.compat.css";
 
-function PopUp({ title, description1, description2, description3, description4, paragraph, url, company, startDate, endDate, skills }) {
+function PopUp({ title, description1, description2, description3, description4, description5, paragraph, url, company, startDate, endDate, skills }) {
     const [open, setOpen] = useState(false);
     const openModal = () => {
         setOpen(true); //using setOpen setter to change open value
@@ -51,7 +51,8 @@ function PopUp({ title, description1, description2, description3, description4, 
                                 <div className="pb-1 text-[0.8em] text-left pb-3 leading-none md:text-sm lg:text-base">{description1}</div>
                                 <div className="pb-1 text-[0.8em] leading-none pb-3 text-left md:text-sm lg:text-base">{description2}</div>
                                 <div className="pb-1 text-[0.8em] text-left pb-3 leading-none md:text-sm lg:text-base">{description3}</div>
-                                <div className="pb-1 text-[0.8em] text-left leading-none md:text-sm lg:text-base">{description4}</div>
+                                <div className="pb-1 text-[0.8em] text-left pb-3 leading-none md:text-sm lg:text-base">{description4}</div>
+                                <div className="pb-1 text-[0.8em] text-left leading-none md:text-sm lg:text-base">{description5}</div>
                             </div>
                             <div class="text-red-700 bg-blue-950 w-full pt-3 pb-2 text-sm font-light text-left px-4 lg:text-base">
                                 SKILLS:
@@ -85,17 +86,70 @@ function Timeline() {
             <div className="flex flex-row">
                 <div className="text-center w-1/2">
                     <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">APRIL 2024 - PRESENT</div>
+                        <div className="text-xs text-left font-light pl-2 lg:text-base">MAY 2025 - PRESENT</div>
+                        <div className="text-base font-bold text-center md:text-lg lg:text-xl">Data Director</div>
+                        <div className="text-xs font-normal text-right pr-2 italic md:text-lg"> Young Democrats of Michigan </div>
+                        {/* <PopUp title="Data Manager"
+                            description1="
+                            Developed and executed data strategies for a large-scale engagement program, streamlining data management across 41 universities using Excel, SQL, Google Data Studio, and Python to engage students. 
+                            "
+                            description2="Designed and implemented a targeting system integrating web data to reach previously untapped student populations, successfully registering 5,292 voters and 54,445 field sign-ups/PTVs."
+                            description3="Implemented cross-platform systems using APIs and integrations to enhance connectivity and improve data flow, helping our team of 450 coordinate 13,951 shifts.
+                            "
+                            description4="Generated data insights using Google Data Studio and Powerpoint to create visualizations and reports on organizational metrics that facilitated data-driven decision-making among senior leadership.
+                            "
+                            description5="Created detailed tracking systems, including hiring and performance trackers documenting sizable engagement numbers, such as 57,468 doors knocked, 402,444 calls made, and 1,211,644 texts sent, along with 16,643 contacts."
+                            url = {<img src={forMich} className="experience-img w-auto h-[30vh] pt-5 pb-5"></img>}
+                            startDate="APRIL 2024"
+                            endDate="PRESENT"
+                            company="For Michigan"
+                            skills="NGP VAN, Data Management, Empower, Blocks, Data Maintenance and Integrity, Google Sheets" /> */}
+                    </div>
+                </div>
+                <div className="flex flex-col justify-center items-center px-4">
+                    <div className="point"></div>
+                    <div className="line"></div>
+                </div>
+                <div className="text-center w-1/2"></div>
+            </div>
+            <div className="flex flex-row">
+                <div className="text-center w-1/2"></div>
+                <div className="flex flex-col justify-center items-center px-4">
+                    <div className="point"></div>
+                    <div className="line"></div>
+                </div>
+                <div className=" text-center w-1/2">
+                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
+                        <div className="text-xs text-left font-light pl-2 lg:text-base">MAY 2025 - PRESENT </div>
+                        <div className="text-base font-bold text-center md:text-lg lg:text-xl"> Co-Founder </div>
+                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Michigan Next
+                         </div>
+                        {/* <PopUp title="Data Fellow"
+                            description1="For Michigan is a college student GOTV organization under the America Votes network. I work directly under the state director to run, optimize, and advise on data."
+                            url = {<img src={forMich} className="experience-img w-auto h-[30vh] pt-5 pb-5"></img>}
+                            startDate="FEBRURARY 2024"
+                            endDate="APRIL 2024"
+                            company="For Michigan"
+                            skills="NGP Van, Spreadsheets" /> */}
+                    </div>
+                </div>
+            </div>
+            <div className="flex flex-row">
+                <div className="text-center w-1/2">
+                    <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
+                        <div className="text-xs text-left font-light pl-2 lg:text-base">APRIL 2024 - NOVEMBER 2024</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Data Manager</div>
-                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm md:text-lg"> For Michigan, an America Votes Organization </div>
+                        <div className="text-xs font-normal text-right pr-2 italic md:text-lg"> For Michigan, an America Votes Organization </div>
                         <PopUp title="Data Manager"
                             description1="
-                            Led the development and execution of data management strategies for For Michigan's campus organizing program, ensuring data integrity and actionable insights for optimization."
-                            description2="Created VAN, Empower, Blocks, Mobolize, Hiring Trackers, and many other pivotal systems for the organization."
-                            description3="Implement data collection systems for voter registrations, pledges to vote, performance tracking, hiring, and organizational progress toward goals.
+                            Developed and executed data strategies for a large-scale engagement program, streamlining data management across 41 universities using Excel, SQL, Google Data Studio, and Python to engage students. 
                             "
-                            description4="Collaborated with the Organizing Director and State Director to advise on data analytics to innovate high-traffic canvassing and relational organizing tactics that enhanced student engagement and campaign growth.
+                            description2="Designed and implemented a targeting system integrating web data to reach previously untapped student populations, successfully registering 5,292 voters and 54,445 field sign-ups/PTVs."
+                            description3="Implemented cross-platform systems using APIs and integrations to enhance connectivity and improve data flow, helping our team of 450 coordinate 13,951 shifts.
                             "
+                            description4="Generated data insights using Google Data Studio and Powerpoint to create visualizations and reports on organizational metrics that facilitated data-driven decision-making among senior leadership.
+                            "
+                            description5="Created detailed tracking systems, including hiring and performance trackers documenting sizable engagement numbers, such as 57,468 doors knocked, 402,444 calls made, and 1,211,644 texts sent, along with 16,643 contacts."
                             url = {<img src={forMich} className="experience-img w-auto h-[30vh] pt-5 pb-5"></img>}
                             startDate="APRIL 2024"
                             endDate="PRESENT"
@@ -134,17 +188,18 @@ function Timeline() {
             <div className="flex inline-flex">
                 <div className=" text-center w-1/2">
                     <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">JANURARY 2024 - PRESENT </div>
-                        <div className="text-base font-bold text-center md:text-lg lg:text-xl">GSP DEI Peer Facilitator</div>
-                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Global Scholars Program at the University of Michigan </div>
-                        <PopUp title="GSP DEI Peer Facilitator"
-                            startDate="JANURARY 2024"
-                            endDate="PRESENT"
-                            paragraph="After undertaking a 16-week seminar series and retreat, I became trained in DEI principles and strategies for management to help guide new global scholars through the program and their internships under NGO organizations. Furthermore, we learned critical language skills in conversing complex topics, including but not limited to gender, race, sexuality, global issues, and microaggressions. 
-                            "
-                            company="Global Scholars Program at the University of Michigan"
-                            skills="Diversity, Equity, Inclusion, Leadership"
-                        />
+                        <div className="text-xs text-left font-light pl-2 lg:text-base">NOVEMBER 2023 - MARCH 2024</div>
+                        <div className="text-sm font-bold text-center md:text-lg lg:text-xl">Deputy Campaigns and Lobbying Director</div>
+                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Michigan Federation of College Democrats </div>
+                        <PopUp title="Deputy Campaigns and Lobbying Director"
+                            description1="Developed a comprehensive political tracker for state and federal campaigns within Michigan. Created research on candidates possible candidates across Michigan for future MFCD involvement in races. Created multiple educational resources for chapters to increase the political participation of chapter members through various means. Spearheaded the creation of the advocacy and lobbying policy group for college students across the state"
+                            url = {<img src={mfcc} className="experience-img w-auto h-[30vh] pt-5 pb-5"></img>}
+                            startDate="NOVEMBER 2023"
+                            endDate="MARCH 2024"
+                            company="Michigan Federation of College Democrats"
+                            skills="Microsoft Excel, Political Campaigns, Political Research and Tracking, Public Policy" />
+                    
+                        
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center px-4">
@@ -163,53 +218,7 @@ function Timeline() {
                 </div>
                 <div className=" text-center w-1/2">
                     <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">NOVEMBER 2023 - MARCH 2024</div>
-                        <div className="text-sm font-bold text-center md:text-lg lg:text-xl">Deputy Campaigns and Lobbying Director</div>
-                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Michigan Federation of College Democrats </div>
-                        <PopUp title="Deputy Campaigns and Lobbying Director"
-                            description1="Developed a comprehensive political tracker for state and federal campaigns within Michigan. Created research on candidates possible candidates across Michigan for future MFCD involvement in races. Created multiple educational resources for chapters to increase the political participation of chapter members through various means. Spearheaded the creation of the advocacy and lobbying policy group for college students across the state"
-                            url = {<img src={mfcc} className="experience-img w-auto h-[30vh] pt-5 pb-5"></img>}
-                            startDate="NOVEMBER 2023"
-                            endDate="MARCH 2024"
-                            company="Michigan Federation of College Democrats"
-                            skills="Microsoft Excel, Political Campaigns, Political Research and Tracking, Public Policy" />
-                    </div>
-
-                </div>
-            </div>
-            <div className="flex inline-flex">
-                <div className=" text-center w-1/2">
-                    <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">NOVEMBER 2023 - PRESENT</div>
-                        <div className="text-sm font-bold text-center md:text-lg lg:text-xl">Policy Researcher and Presenter</div>
-                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Michigan Institute of Progressive Policy</div>
-                        <PopUp title="Policy Researcher and Presenter"
-                            paragraph="As a member of the Michigan Institute for Progressive Policy, I helped push policy for an election day holiday on campus. We are currently lobbying the Board of Regents to accept our measure. To build support, we actively push petitions and present the policy memo to key strategists who can aid in the development of the plan. 
-                            "
-                            url = {<img src={mipp} className="experience-img w-auto h-[30vh] pt-5 pb-5"></img>}
-                            startDate="NOVEMBER 2023"
-                            endDate="PRESENT"
-                            company="Michigan Institute of Progressive Policy"
-                            skills="Policy Research" />
-                    </div>
-
-                </div>
-                <div className="flex flex-col justify-center items-center px-4">
-                    <div className="point"></div>
-                    <div className="line"></div>
-                    <div className="line2"></div>
-                </div>
-                <div className="text-center w-1/2"></div>
-            </div>
-            <div className="flex inline-flex">
-                <div className="text-center w-1/2"> </div>
-                <div className="flex flex-col justify-center items-center px-4">
-                    <div className="point"></div>
-                    <div className="line"></div>
-                </div>
-                <div className=" text-center w-1/2">
-                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">SEPTEMBER 2023 - APRIL 2024</div>
+                    <div className="text-xs text-left font-light pl-2 lg:text-base">SEPTEMBER 2023 - APRIL 2024</div>
                         <div className="text-sm font-bold text-center md:text-lg lg:text-xl">Research Assistant</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> University of Michigan Institute for Social Research </div>
                         <PopUp title="Data Manager"
@@ -228,7 +237,7 @@ function Timeline() {
             <div className="flex inline-flex">
                 <div className=" text-center w-1/2">
                     <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">AUGUST 2023 - OCTOBER 2023</div>
+                    <div className="text-xs text-left font-light pl-2 lg:text-base">AUGUST 2023 - OCTOBER 2023</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Intern</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Elect Democratic Women</div>
                         <PopUp title="Intern"
@@ -252,54 +261,7 @@ function Timeline() {
                 <div className="text-center w-1/2"></div>
             </div>
             <div className="flex inline-flex">
-                <div className="text-center w-1/2"></div>
-                <div className="flex flex-col justify-center items-center px-4">
-                    <div className="point"></div>
-                    <div className="line"></div>
-                </div>
-                <div className=" text-center w-1/2">
-                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">AUGUST 2023 - PRESENT</div>
-                        <div className="text-base font-bold text-center md:text-lg lg:text-xl">Member</div>
-                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Global Scholars Program at the University of Michigan</div>
-                        <PopUp title="Member"
-                            paragraph="In my first year in the Global Scholars Program, I interned for a climate organization based in Mexico City. Along with my team, I developed a donor database for the organization, which they can draw upon for years. 
-                            "
-                            url = {<img src={gsp} className="experience-img w-auto h-[30vh] pt-5 pb-5"></img>}
-                            skills="Non-Profit Work"
-                            startDate="AUGUST 2023"
-                            endDate="PRESENT"
-                            company="Global Scholars Program at the University of Michigan" />
-                    </div>
-
-                </div>
-            </div>
-            <div className="flex inline-flex">
-                <div className=" text-center w-1/2">
-                    <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">NOVEMBER 2022 -  APRIL 2023</div>
-                        <div className="text-base font-bold text-center md:text-lg lg:text-xl">Student Body Representative</div>
-                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Student Services Council and Business Administration Council @ Muskegon Community College </div>
-                        <PopUp title="Student Services Council and Business Administration Council Student Body Representative"
-                            description1="Student Services: Represent all students and board on the council to vote on college administration petitions, and ongoing financial case repeals from students."
-                            description2="Business Administration: Represent student body interest in meeting for increasing tuition rate for the 2023-24 academic year."
-                            startDate="NOVEMBER 2022"
-                            endDate="APRIL 2023"
-                            url = {pres}
-                            skills="Leadership, Social Work"
-                            company="Student Services Council and Business Administration Council @ Muskegon Community College" />
-                    </div>
-
-                </div>
-                <div className="flex flex-col justify-center items-center px-4">
-                    <div className="point"></div>
-                    <div className="line"></div>
-                    <div className="line2"></div>
-                </div>
-                <div className="text-center w-1/2"></div>
-            </div>
-            <div className="flex inline-flex">
-                <div className=" text-center w-1/2"></div>
+                <div className="text-center w-1/2"> </div>
                 <div className="flex flex-col justify-center items-center px-4">
                     <div className="point"></div>
                     <div className="line"></div>
@@ -307,32 +269,8 @@ function Timeline() {
                 </div>
                 <div className=" text-center w-1/2">
                     <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">AUGUST 2022 - APRIL 2023</div>
-                        <div className="text-base font-bold text-center md:text-lg lg:text-xl">President</div>
-                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Muskegon Community College Student Government Association </div>
-                        <PopUp title="President"
-                            paragraph="As President of Muskegon Community College, I represented the college in a pivotal time in college safety. I lobbied on Capitol Hill with the College President, the SGA advisor, and an attorney for a safety funding bill. During this time, I also managed the clubs and organization budgets and ensured we built a new system for clubs to thrive after many died out during the pandemic. We also created advertisements and marketing campaigns to get students involved on campus."
-                            skills="Leadership, Lobbying, Social Work, Fund Management"
-                            url = {<iframe
-                                width="853"
-                                height="480"
-                                src="https://www.youtube.com/embed/Q5q5N_IuYp4"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                title="Embedded YouTube"
-                              /> }
-                            startDate="AUGUST 2022"
-                            endDate="APRIL 2023"
-                            company="Muskegon Community College Student Government Association" />
-                    </div>
-
-                </div>
-            </div>
-            <div className="flex inline-flex">
-                <div className=" text-center w-1/2">
-                    <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">JULY 2022 - DECEMBER 2022</div>
-                        <div className="text-base font-bold text-center md:text-lg lg:text-xl">Field Director</div>
+                    <div className="text-xs text-left font-light pl-2 lg:text-base">JULY 2022 - DECEMBER 2022</div>
+                        <div className="text-base font-bold text-center md:text-lg lg:text-xl">Campaign Intern</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Will Snyder for Michigan's 87th State House District</div>
                         <PopUp title="Field Director"
                             description1="Directed Successful Political Campaigns with High Voter Turnout: Led Will Snyder's State House 87th campaign to victory, securing a win in the August election with 39% in a competitive four-candidate race. 
@@ -350,22 +288,12 @@ function Timeline() {
                     </div>
 
                 </div>
-                <div className="flex flex-col justify-center items-center px-4">
-                    <div className="point"></div>
-                    <div className="line"></div>
-                </div>
-                <div className="text-center w-1/2"></div>
             </div>
             <div className="flex inline-flex">
-                <div className="text-center w-1/2"></div>
-                <div className="flex flex-col justify-center items-center px-4">
-                    <div className="point"></div>
-                    <div className="line"></div>
-                </div>
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">JULY 2022 - DECEMBER 2022</div>
-                        <div className="text-base font-bold text-center md:text-lg lg:text-xl">Field Director</div>
+                    <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
+                    <div className="text-xs text-left font-light pl-2 lg:text-base">JULY 2022 - DECEMBER 2022</div>
+                        <div className="text-base font-bold text-center md:text-lg lg:text-xl">Campaign Intern</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Terry Sabo for Michigan's 32nd State Senate District </div>
                         <PopUp title="Field Director"
                             description1="Helped lead the State House 87th campaign, achieving a primary win with a 39% lead in a 4-way race and the November election with a significant 62% majority vote.
@@ -381,14 +309,25 @@ function Timeline() {
                             company="Terry Sabo for Michigan's 32nd State Senate District"
                             skills="Canvassing and Text Banking Management, NPGVAN
                             " />
-
                     </div>
+
                 </div>
+                <div className="flex flex-col justify-center items-center px-4">
+                    <div className="point"></div>
+                    <div className="line"></div>
+                    <div className="line2"></div>
+                </div>
+                <div className="text-center w-1/2"></div>
             </div>
             <div className="flex inline-flex">
+                <div className="text-center w-1/2"></div>
+                <div className="flex flex-col justify-center items-center px-4">
+                    <div className="point"></div>
+                    <div className="line"></div>
+                </div>
                 <div className=" text-center w-1/2">
-                    <div className="experience rounded-bl-lg rounded-tl-lg rounded-tr-sm rounded-br-sm">
-                        <div className="text-xs text-left font-light pl-2 lg:text-base">MAY 2022 - SEPTEMBER 2022</div>
+                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
+                    <div className="text-xs text-left font-light pl-2 lg:text-base">MAY 2022 - SEPTEMBER 2022</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">West Michigan Regional Lead</div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg">Rise</div>
                         <PopUp title="West Michigan Regional Lead"
@@ -404,11 +343,6 @@ function Timeline() {
                     </div>
 
                 </div>
-                <div className="flex flex-col justify-center items-center px-4">
-                    <div className="point"></div>
-                    <div className="line"></div>
-                </div>
-                <div className="text-center w-1/2"></div>
             </div>
         </div>
     )
