@@ -58,7 +58,7 @@ function Dropdown() {
 
 const Education1 = ({ school, degree, start, end, url, descriptions }) => {
   return (
-    <div className="w-[80vw] h-1/3 bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-full w-1/3 md:mr-5 md:ml-5">
+    <div className="w-[80vw] bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-full w-1/3 md:mr-5 md:ml-5">
       <div className="text-l font-bold text-center text-red-700 pt-3 pl-3 pr-3 md:text-xl pt-5 pl-5 pr-5"> {school} </div>
       <img src={url} className="rounded-full w-1/2 h-auto md:w-1/2 m-2 lg:w-1/3 h-auto"></img>
       <div className="text-sm px-1 text-center font-semibold italic md:text-base pt-2 lg:text-lg">{degree}</div>
@@ -72,7 +72,7 @@ const Education1 = ({ school, degree, start, end, url, descriptions }) => {
 
 const Education2 = ({ school, degree, start, end, url, descriptions }) => {
   return (
-    <div className="w-[80vw] h-1/3 bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-full w-1/3 md:ml-5 md:mr-5">
+    <div className="w-[80vw] bg-gray-300 border-red-700 flex flex-col justify-center items-center rounded-bl-lg rounded-tl-lg rounded-br-lg rounded-tr-lg shadow-xl shadow-red-700 mb-5 md:h-full w-1/3 md:ml-5 md:mr-5">
       <div className="text-l font-bold text-center text-red-700 pt-3 pl-3 pr-3 md:text-xl pt-5 pl-5 pr-5"> {school} </div>
       <img src={url} className="rounded-full w-1/2 h-auto md:w-1/2 m-2 lg:w-1/3 h-auto"></img>
       <div className="text-sm px-1 text-center font-semibold italic md:text-base pt-2 lg:text-lg">{degree}</div>
@@ -170,8 +170,8 @@ function App() {
       <script src="https://kit.fontawesome.com/fa913dc807.js" crossorigin="anonymous"></script>
       <div className="bg-blue-950 font-georgia-like min-h-screen flex justify-start items-center flex-col">
         <div className="w-screen h-auto flex flex-col md:justify-start md:items-start">
-          <div className="w-screen h-auto py-8 px-5 font-semibold border-b-8 border-double border-gray-300 flex flex-col md:flex-row">
-            <div className="text-3xl md:text-5xl w-1/2 text-red-700 font-georgia-like font-semibold"> {his_majesty.first_name} {his_majesty.middle_name} {his_majesty.last_name}</div>
+          <div className="w-screen h-auto py-8 px-5 font-semibold border-b-8 border-double border-red-700 flex flex-col md:flex-row">
+            <div className="text-3xl md:text-5xl w-1/2 text-gray-300 font-georgia-like font-semibold"> {his_majesty.first_name} {his_majesty.middle_name} {his_majesty.last_name}</div>
             <div className="flex inline-flex w-1/2 mt-5 md:mt-0 md:justify-end items-center">
               <Circle icon={
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

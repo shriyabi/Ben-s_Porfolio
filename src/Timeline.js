@@ -29,7 +29,7 @@ function PopUp({ title, description1, description2, description3, description4, 
             <button className="text-xs text-red-700 hover:text-blue-950 hover:text-sm lg:text-sm hover:text-md" onClick={openModal}> Read More </button>
             {open && ( // Changed isOpen to open
                 <div className="modal-overlay ">
-                    <div className="modal w-[80vw] max-height-[90vh] overflow-y-auto scroll-smooth">
+                    <div className="modal w-[80vw] md:max-height-[90vh] overflow-y-auto scroll-smooth">
                         <div className="modal-header">
                             <div className="text-xl pt-5 pl-5 font-bold text-red-700 underline lg:text-2xl">{title}</div>
                             <button className="text-xs mr-2 ml-10 p-1 border border-solid rounded-full border-blue-950 hover:bg-red-700 hover:text-gray-300 lg:text-base" onClick={closeModal}> Close </button>
@@ -83,28 +83,28 @@ function Transition({ children, className }) {
 function Timeline() {
     return (
         <div className="flex flex-col justify-center w-4/5 lg:w-screen xl:w-3/5">
+             <div className="flex flex-row">
+                <div className="text-center w-1/2"></div>
+                <div className="flex flex-col justify-center items-center px-4">
+                    <div className="point"></div>
+                    <div className="line"></div>
+                </div>
+                <div className=" text-center w-1/2">
+                    <div className="experience rounded-tr-lg rounded-br-lg rounded-tl-sm rounded-bl-sm">
+                        <div className="text-xs text-left font-light pl-2 lg:text-base">AUGUST 2025 -  </div>
+                        <div className="text-base font-bold text-center md:text-lg lg:text-xl"> Business Analyst </div>
+                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Deloitte (Goverment and Public Service Division)
+                         </div>
+                    </div>
+                </div>
+            </div>
             <div className="flex flex-row">
                 <div className="text-center w-1/2">
                     <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
                         <div className="text-xs text-left font-light pl-2 lg:text-base">MAY 2025 - PRESENT</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Data Director</div>
-                        <div className="text-xs font-normal text-right pr-2 italic md:text-lg"> Young Democrats of Michigan </div>
-                        {/* <PopUp title="Data Manager"
-                            description1="
-                            Developed and executed data strategies for a large-scale engagement program, streamlining data management across 41 universities using Excel, SQL, Google Data Studio, and Python to engage students. 
-                            "
-                            description2="Designed and implemented a targeting system integrating web data to reach previously untapped student populations, successfully registering 5,292 voters and 54,445 field sign-ups/PTVs."
-                            description3="Implemented cross-platform systems using APIs and integrations to enhance connectivity and improve data flow, helping our team of 450 coordinate 13,951 shifts.
-                            "
-                            description4="Generated data insights using Google Data Studio and Powerpoint to create visualizations and reports on organizational metrics that facilitated data-driven decision-making among senior leadership.
-                            "
-                            description5="Created detailed tracking systems, including hiring and performance trackers documenting sizable engagement numbers, such as 57,468 doors knocked, 402,444 calls made, and 1,211,644 texts sent, along with 16,643 contacts."
-                            url = {<img src={forMich} className="experience-img w-auto h-[30vh] pt-5 pb-5"></img>}
-                            startDate="APRIL 2024"
-                            endDate="PRESENT"
-                            company="For Michigan"
-                            skills="NGP VAN, Data Management, Empower, Blocks, Data Maintenance and Integrity, Google Sheets" /> */}
-                    </div>
+                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Young Democrats of Michigan </div>
+                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center px-4">
                     <div className="point"></div>
@@ -124,13 +124,6 @@ function Timeline() {
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl"> Co-Founder </div>
                         <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> Michigan Next
                          </div>
-                        {/* <PopUp title="Data Fellow"
-                            description1="For Michigan is a college student GOTV organization under the America Votes network. I work directly under the state director to run, optimize, and advise on data."
-                            url = {<img src={forMich} className="experience-img w-auto h-[30vh] pt-5 pb-5"></img>}
-                            startDate="FEBRURARY 2024"
-                            endDate="APRIL 2024"
-                            company="For Michigan"
-                            skills="NGP Van, Spreadsheets" /> */}
                     </div>
                 </div>
             </div>
@@ -139,7 +132,7 @@ function Timeline() {
                     <div className="experience rounded-tl-lg rounded-bl-lg rounded-tr-sm rounded-br-sm">
                         <div className="text-xs text-left font-light pl-2 lg:text-base">APRIL 2024 - NOVEMBER 2024</div>
                         <div className="text-base font-bold text-center md:text-lg lg:text-xl">Data Manager</div>
-                        <div className="text-xs font-normal text-right pr-2 italic md:text-lg"> For Michigan, an America Votes Organization </div>
+                        <div className="text-xs font-normal text-right pr-2 italic md:text-sm lg:text-lg"> For Michigan, an America Votes Organization </div>
                         <PopUp title="Data Manager"
                             description1="
                             Developed and executed data strategies for a large-scale engagement program, streamlining data management across 41 universities using Excel, SQL, Google Data Studio, and Python to engage students. 
