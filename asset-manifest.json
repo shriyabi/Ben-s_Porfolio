@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/Ben-s_Porfolio/static/css/main.2cdad391.css",
-    "main.js": "/Ben-s_Porfolio/static/js/main.80546a47.js",
+    "main.css": "/Ben-s_Porfolio/static/css/main.9651ceef.css",
+    "main.js": "/Ben-s_Porfolio/static/js/main.901fab5e.js",
     "static/js/453.8ab44547.chunk.js": "/Ben-s_Porfolio/static/js/453.8ab44547.chunk.js",
+    "static/media/Management.png": "/Ben-s_Porfolio/static/media/Management.6e80358ec06fbaf0897b.png",
+    "static/media/Post.png": "/Ben-s_Porfolio/static/media/Post.c0bcd2e1a2572759a7d8.png",
     "static/media/pyeveryone.jpeg": "/Ben-s_Porfolio/static/media/pyeveryone.275d8077511b13d92f03.jpeg",
     "static/media/dspython.jpeg": "/Ben-s_Porfolio/static/media/dspython.71f4ce20126bf7387cff.jpeg",
     "static/media/gsp.png": "/Ben-s_Porfolio/static/media/gsp.7d4cdd383492b9a5a231.png",
     "static/media/UROP.jpeg": "/Ben-s_Porfolio/static/media/UROP.9ac81214aa4f2492074f.jpeg",
     "static/media/IMG_5595.jpeg": "/Ben-s_Porfolio/static/media/IMG_5595.9fd44eca0bd1e84e78a9.jpeg",
+    "static/media/ben_headshot.jpeg": "/Ben-s_Porfolio/static/media/ben_headshot.c4f76e1f25f4b20bc4fa.jpeg",
     "static/media/rise.jpeg": "/Ben-s_Porfolio/static/media/rise.971e5424585137968768.jpeg",
     "static/media/will.jpeg": "/Ben-s_Porfolio/static/media/will.71a7df335829a153c1e6.jpeg",
     "static/media/lobby.jpeg": "/Ben-s_Porfolio/static/media/lobby.7848a701cc576ec6732f.jpeg",
@@ -17,12 +20,12 @@
     "static/media/highschool.jpeg": "/Ben-s_Porfolio/static/media/highschool.55d4de8d91c25190081f.jpeg",
     "static/media/4MichBlue.png": "/Ben-s_Porfolio/static/media/4MichBlue.698a7fb21c4460505fa4.png",
     "index.html": "/Ben-s_Porfolio/index.html",
-    "main.2cdad391.css.map": "/Ben-s_Porfolio/static/css/main.2cdad391.css.map",
-    "main.80546a47.js.map": "/Ben-s_Porfolio/static/js/main.80546a47.js.map",
+    "main.9651ceef.css.map": "/Ben-s_Porfolio/static/css/main.9651ceef.css.map",
+    "main.901fab5e.js.map": "/Ben-s_Porfolio/static/js/main.901fab5e.js.map",
     "453.8ab44547.chunk.js.map": "/Ben-s_Porfolio/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2cdad391.css",
-    "static/js/main.80546a47.js"
+    "static/css/main.9651ceef.css",
+    "static/js/main.901fab5e.js"
   ]
 }
